@@ -1,0 +1,68 @@
+<?php
+add_action( 'init', 'ht_post_type' );
+function ht_post_type() {
+	$labels = [
+		'name'                     => esc_html__( '高澄嚴選案例', 'ht' ),
+		'singular_name'            => esc_html__( '高澄嚴選案例', 'ht' ),
+		'add_new'                  => esc_html__( '新增', 'ht' ),
+		'add_new_item'             => esc_html__( '新增', 'ht' ),
+		'edit_item'                => esc_html__( '編輯', 'ht' ),
+		'new_item'                 => esc_html__( '新增高澄嚴選案例', 'ht' ),
+		'view_item'                => esc_html__( '查看', 'ht' ),
+		'view_items'               => esc_html__( '查看', 'ht' ),
+		'search_items'             => esc_html__( '搜尋高澄嚴選案例', 'ht' ),
+		'not_found'                => esc_html__( '找不到高澄嚴選案例', 'ht' ),
+		'not_found_in_trash'       => esc_html__( '在垃圾筒中找不到高澄嚴選案例', 'ht' ),
+		'parent_item_colon'        => esc_html__( '父高澄嚴選案例:', 'ht' ),
+		'all_items'                => esc_html__( '所有高澄嚴選案例', 'ht' ),
+		'archives'                 => esc_html__( '高澄嚴選案例頁庫存檔', 'ht' ),
+		'attributes'               => esc_html__( '高澄嚴選案例屬性', 'ht' ),
+		'insert_into_item'         => esc_html__( '插入至高澄嚴選案例', 'ht' ),
+		'uploaded_to_this_item'    => esc_html__( '上船這個至高澄嚴選案例', 'ht' ),
+		'featured_image'           => esc_html__( '封面圖', 'ht' ),
+		'set_featured_image'       => esc_html__( '設定封面圖', 'ht' ),
+		'remove_featured_image'    => esc_html__( '移除封面圖', 'ht' ),
+		'use_featured_image'       => esc_html__( '設定為封面圖', 'ht' ),
+		'menu_name'                => esc_html__( '高澄嚴選案例', 'ht' ),
+		'filter_items_list'        => esc_html__( '篩選高澄嚴選案例清單', 'ht' ),
+		'filter_by_date'           => esc_html__( '', 'ht' ),
+		'items_list_navigation'    => esc_html__( '高澄嚴選案例清單導航', 'ht' ),
+		'items_list'               => esc_html__( '高澄嚴選案例清單', 'ht' ),
+		'item_published'           => esc_html__( '高澄嚴選案例已發佈', 'ht' ),
+		'item_published_privately' => esc_html__( '高澄嚴選案例已發佈為私人', 'ht' ),
+		'item_reverted_to_draft'   => esc_html__( '高澄嚴選案例退回為草稿', 'ht' ),
+		'item_scheduled'           => esc_html__( '高澄嚴選案例已排程', 'ht' ),
+		'item_updated'             => esc_html__( '高澄嚴選案例已更新', 'ht' ),
+		'text_domain'              => esc_html__( 'ht', 'ht' ),
+	];
+	$args = [
+		'label'               => esc_html__( '高澄嚴選案例', 'ht' ),
+		'labels'              => $labels,
+		'description'         => '',
+		'public'              => true,
+		'hierarchical'        => false,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'show_ui'             => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'show_in_rest'        => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'delete_with_user'    => true,
+		'has_archive'         => true,
+		'rest_base'           => '',
+		'show_in_menu'        => true,
+		'menu_position'       => '',
+		'menu_icon'           => 'dashicons-format-quote',
+		'capability_type'     => 'post',
+		'supports'            => ['title', 'editor', 'thumbnail', 'excerpt'],
+		'taxonomies'          => [],
+		'rewrite'             => [
+			'with_front' => false,
+		],
+	];
+
+	register_post_type( 'ht-select', $args );
+}
+
