@@ -355,6 +355,17 @@ function add_to_head()
         gtag('config', 'AW-336751528');
     </script>
 
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2M3D22');</script>
+<!-- End Google Tag Manager -->
+
+
     <!-- Event snippet for 網頁瀏覽（官網） conversion page -->
     <script>
         function gtag_report_conversion(url) {
